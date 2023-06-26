@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class WizardController {
 
-    private WizardRepository repository = new WizardRepository();
+    @Autowired
+    private WizardDao wizardDao;
 
     @GetMapping("/wizards")
     public String getAll(Model model) {
